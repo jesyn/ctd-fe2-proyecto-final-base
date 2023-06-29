@@ -1,4 +1,3 @@
-import React from "react";
 import {
   BotonSuscribir,
   CloseButton,
@@ -11,29 +10,25 @@ import {
 } from "./styled";
 import { SuscribeImage, CloseButton as Close } from "../../assets";
 
-/**
- * @typedef {Object} ModalSubscripcionProps
- * @property {funtion} onClose - Manejador de cierre del modal.
- * @property {funtion} onSubscription - Manejador de suscripción.
- */
-
-/**
- * Componente para el modal de suscripción.
- * @param {ModalSubscripcionProps} props - Propiedades del componente.
- * @returns {JSX.Element} - Elemento JSX del modal de suscripción.
- */
-
 interface IModalSubscripcionProps {
   onClose: () => void;
   onSubscription: () => void;
 }
+
+/**
+ * componente para mostrar el modal de subscripción
+ * @param {Object} props
+ * @param {funtion} props.onClose - Manejador de cierre del modal.
+ * @param {funtion} props.onSubscription - Manejador de suscripción.
+ * @returns {JSX.Element} - Elemento JSX del modal de suscripción.
+ */
 
 const ModalSubscripcion = ({
   onClose,
   onSubscription,
 }: IModalSubscripcionProps) => {
   return (
-    <ContenedorModal>
+    <ContenedorModal data-testid="modal">
       <TarjetaModal>
         <CloseButton onClick={onClose}>
           <img src={Close} alt="close-button" />

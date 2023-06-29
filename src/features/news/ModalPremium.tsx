@@ -9,26 +9,24 @@ import {
 } from "./styled";
 import { CloseButton as Close } from "../../assets";
 
-/**
- * @typedef {Object} ModalPremiumProps
- * @property {string} image - URL de la imagen del personaje.
- * @property {string} nombre - Nombre del personaje.
- * @property {string} descripcion - Descripción del personaje.
- * @property {funtion} onClose - Manejador de cierre del modal.
- */
-
-/**
- * Componente para el modal premium.
- * @param {ModalPremiumProps} props - Propiedades del componente.
- *@returns {JSX.Element} - Elemento JSX del modal premium.
- */
-
 interface IModalPremiumProps {
   onClose: () => void;
   imagen: string;
   titulo: string;
   descripcion: string;
 }
+
+/**
+ * componente para mostrar el modal premium
+ * @param {Object} props
+ * @param {string} props.image - URL de la imagen del personaje.
+ * @param {string} props.titulo - Titulo de la noticia.
+ * @param {string} props.descripcion - Descripción de la noticia.
+ * @param {funtion} props.onClose - Manejador de cierre del modal.
+ * @returns {JSX.Element} - Elemento JSX del modal premium.
+ */
+
+
 const ModalPremium = ({
   onClose,
   imagen,
@@ -36,7 +34,7 @@ const ModalPremium = ({
   descripcion,
 }: IModalPremiumProps) => {
   return (
-    <ContenedorModal>
+    <ContenedorModal data-testid="modal">
       <TarjetaModal>
         <CloseButton onClick={onClose}>
           <img src={Close} alt="close-button" />

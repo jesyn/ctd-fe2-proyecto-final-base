@@ -8,16 +8,24 @@ import {
   BotonLectura,
 } from "./styled";
 
-/**
- * Componente para mostrar cada noticia.
- * @param {NoticiasProps} props - Propiedades del componente.
- * @returns {JSX.Element} - Elemento JSX de la noticia.
- */
-
 export interface ICardNoticias {
   noticias: INoticiasNormalizadas[];
   handelClick: (n: INoticiasNormalizadas) => void;
 }
+
+/**
+ * Componente para mostrar cada noticia.
+ * @param {noticia[]} props.noticias - Array de objetos que representan las noticias a mostrar
+ * @param {number} props.noticias[].id - id de noticia
+ * @param {string} props.noticias[].titulo - titulo de la noticia
+ * @param {string} props.noticias[].descripcion - descripcion de la notica
+ * @param {(number|string)} props.noticias[].fecha - fecha de la noticia
+ * @param {boolean} props.noticias[].esPremium - booleano que determina si la noticia es premium o no
+ * @param {string} props.noticias[].imagen - imagen de la noticia
+ * @param {descripcionCorta} props.noticias[].[descripcionCorta] - descripcion resumida de la noticia
+ * @param {function} props.handelClick - función para ver más información sobre una noticia
+ * @returns {JSX.Element} - Elemento JSX del listado de las noticias.
+ */
 
 const CardNoticias = ({ noticias, handelClick }: ICardNoticias) => {
   return (

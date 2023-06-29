@@ -9,9 +9,7 @@ import CardNoticias from "./CardNoticias";
 
 /**
  *Componente para mostrar noticias de los Simpsons.
-  * Obtiene el modal correspondiente según el tipo de noticia.
-   * @returns {JSX.Element|undefined} - Elemento JSX del modal o undefined si no hay modal activo.
-
+ * @returns {JSX.Element} - Elemento JSX que incluye el listado de las noticias e incluye logica para mostrar distintos modales.
  */
 
 const Noticias = () => {

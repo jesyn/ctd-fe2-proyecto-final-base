@@ -11,10 +11,7 @@ import {
 
 /**
  * Componente para mostrar biografías de personajes de los Simpsons.
- * Maneja el evento de clic en un botón de biografía.
- * @param {NombresSimpsons} nombre - Nombre del personaje de los Simpsons.
- * Crea los botones de selección de biografía.
- * @returns {JSX.Element[]} - Array de elementos JSX para los botones.
+ * @returns {JSX.Element} - JSX con el boton, imagen, nombre y descripción del personaje seleccionado.
  */
 
 const Bio = () => {

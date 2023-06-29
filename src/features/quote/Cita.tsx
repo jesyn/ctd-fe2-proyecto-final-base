@@ -10,6 +10,11 @@ import {
 } from "./citaSlice";
 import { obtenerMensaje } from "./utils";
 
+/**
+ * Componente que muestra una cita obtenida de una API la cual puede ser buscada por nombre o de forma aleatoria.
+ * @returns {JSX.Element} Elemento JSX que muestra una cita aleatoria o según nombre ingresado en el input.
+ */
+
 function Cita() {
   const [valorInput, setValorInput] = useState("");
   const { cita = "", personaje = "" } =
